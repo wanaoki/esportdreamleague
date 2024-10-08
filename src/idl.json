@@ -1,0 +1,209 @@
+{
+    "address": "FAmj5kvAaDgTdS1nzknYDDkS3hCYvAS2EJVNtHKfNqg6",
+    "metadata": {
+      "name": "esports_league",
+      "version": "0.1.0",
+      "spec": "0.1.0",
+      "description": "Created with Anchor"
+    },
+    "instructions": [
+      {
+        "name": "battle",
+        "discriminator": [
+          124,
+          60,
+          127,
+          254,
+          179,
+          26,
+          138,
+          20
+        ],
+        "accounts": [
+          {
+            "name": "player",
+            "writable": true
+          },
+          {
+            "name": "opponent"
+          }
+        ],
+        "args": [
+          {
+            "name": "_opponent",
+            "type": "pubkey"
+          }
+        ]
+      },
+      {
+        "name": "daily_check_in",
+        "discriminator": [
+          98,
+          111,
+          198,
+          206,
+          70,
+          84,
+          67,
+          98
+        ],
+        "accounts": [
+          {
+            "name": "player",
+            "writable": true
+          }
+        ],
+        "args": []
+      },
+      {
+        "name": "initialize",
+        "discriminator": [
+          175,
+          175,
+          109,
+          31,
+          13,
+          152,
+          155,
+          237
+        ],
+        "accounts": [
+          {
+            "name": "game_state",
+            "writable": true,
+            "signer": true
+          },
+          {
+            "name": "authority",
+            "writable": true,
+            "signer": true
+          },
+          {
+            "name": "system_program",
+            "address": "11111111111111111111111111111111"
+          }
+        ],
+        "args": []
+      },
+      {
+        "name": "mint_player",
+        "discriminator": [
+          35,
+          216,
+          24,
+          42,
+          131,
+          130,
+          187,
+          65
+        ],
+        "accounts": [
+          {
+            "name": "game_state",
+            "writable": true
+          },
+          {
+            "name": "player",
+            "writable": true,
+            "signer": true
+          },
+          {
+            "name": "user",
+            "writable": true,
+            "signer": true
+          },
+          {
+            "name": "system_program",
+            "address": "11111111111111111111111111111111"
+          }
+        ],
+        "args": [
+          {
+            "name": "player_name",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "accounts": [
+      {
+        "name": "GameState",
+        "discriminator": [
+          144,
+          94,
+          208,
+          172,
+          248,
+          99,
+          134,
+          120
+        ]
+      },
+      {
+        "name": "Player",
+        "discriminator": [
+          205,
+          222,
+          112,
+          7,
+          165,
+          155,
+          206,
+          218
+        ]
+      }
+    ],
+    "errors": [
+      {
+        "code": 6000,
+        "name": "CheckInTooEarly",
+        "msg": "You can only check in once every 24 hours"
+      }
+    ],
+    "types": [
+      {
+        "name": "GameState",
+        "type": {
+          "kind": "struct",
+          "fields": [
+            {
+              "name": "authority",
+              "type": "pubkey"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Player",
+        "type": {
+          "kind": "struct",
+          "fields": [
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "battles_won",
+              "type": "u64"
+            },
+            {
+              "name": "battles_lost",
+              "type": "u64"
+            },
+            {
+              "name": "daily_check_in",
+              "type": "i64"
+            },
+            {
+              "name": "xp",
+              "type": "u64"
+            },
+            {
+              "name": "power",
+              "type": "u64"
+            }
+          ]
+        }
+      }
+    ]
+  }
