@@ -2,11 +2,13 @@ import React, { useMemo } from 'react';
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import { PhantomWalletAdapter, SolflareWalletAdapter } from '@solana/wallet-adapter-wallets';
-import { WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import { clusterApiUrl } from '@solana/web3.js';
+import Navbar from './Navbar';
 import GameComponent from './GameComponent';
 
 import '@solana/wallet-adapter-react-ui/styles.css';
+import './App.css';
 
 function App() {
   const network = WalletAdapterNetwork.Devnet;
@@ -22,11 +24,10 @@ function App() {
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
           <div className="App">
-            <header>
-              <h1>Esports Dream League</h1>
-              <WalletMultiButton />
-            </header>
-            <GameComponent />
+            <Navbar />
+            <main>
+              <GameComponent />
+            </main>
           </div>
         </WalletModalProvider>
       </WalletProvider>

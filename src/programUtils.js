@@ -232,13 +232,16 @@ export const mintPlayer = async (playerName, gameStatePublicKey, wallet, connect
 export const battle = async (playerPublicKey, opponentPublicKey, wallet, connection) => {
   try {
     const program = getProgram(wallet, connection);
+    
+    // Instead of sending the transaction, we'll create it
     const tx = await program.methods.battle(opponentPublicKey)
       .accounts({
         player: playerPublicKey,
         opponent: opponentPublicKey,
       })
-      .rpc();
-    console.log("Battle transaction signature:", tx);
+      .transaction(); // This creates a transaction instead of sending it
+
+    return tx; // Return the transaction for signing
   } catch (error) {
     console.error("Error in battle:", error);
     throw error;

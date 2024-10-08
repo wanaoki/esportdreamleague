@@ -1,0 +1,84 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #1a2a6c, #b21f1f, #fdbb2d);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .logo-icon {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar-item {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-item:hover {
+    color: #fdbb2d;
+  }
+  
+  .navbar-item svg {
+    margin-right: 0.5rem;
+  }
+  
+  .wallet-button {
+    background: linear-gradient(90deg, #ff8a00, #e52e71) !important;
+    border: none !important;
+    color: white !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .wallet-button:hover {
+    background: linear-gradient(90deg, #e52e71, #ff8a00) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .navbar-logo {
+      margin-bottom: 1rem;
+    }
+  
+    .navbar-menu {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+  
+    .navbar-item {
+      font-size: 0.9rem;
+    }
+  
+    .wallet-button {
+      width: 100%;
+    }
+  }

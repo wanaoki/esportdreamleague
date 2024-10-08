@@ -1,0 +1,53 @@
+.battle-ui {
+    background: linear-gradient(135deg, #ff6b6b, #556270);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+  }
+  
+  .battle-ui h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .opponent-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .opponent-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .battle-ui .gradient-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .battle-result {
+    text-align: center;
+  }
+  
+  .result-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .winner .result-icon {
+    color: gold;
+  }
+  
+  .loser .result-icon {
+    color: #ccc;
+  }
+  
+  .battle-result p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
