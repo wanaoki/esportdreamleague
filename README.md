@@ -3,6 +3,9 @@
 
 Esport Dream League is a decentralized gaming platform built on the Solana blockchain. Players can mint their own NFT characters, engage in battles, and earn rewards through daily check-ins and victories.
 
+# Solana Explorer Contract 
+https://explorer.solana.com/address/FAmj5kvAaDgTdS1nzknYDDkS3hCYvAS2EJVNtHKfNqg6?cluster=devnet
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Prerequisites](#prerequisites)
